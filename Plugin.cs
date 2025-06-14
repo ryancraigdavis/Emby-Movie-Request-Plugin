@@ -15,7 +15,7 @@ namespace MovieRequestPlugin
 
         public override string Description => "Simple plugin for adding movie request functionality";
 
-        public override Guid Id => Guid.Parse("12345678-1234-5678-9012-123456789012");
+        public override Guid Id => new Guid("12345678-1234-5678-9012-123456789012");
 
         public Plugin(IApplicationPaths applicationPaths, IXmlSerializer xmlSerializer) : base(applicationPaths, xmlSerializer)
         {
@@ -30,7 +30,7 @@ namespace MovieRequestPlugin
             {
                 new PluginPageInfo
                 {
-                    Name = this.Name,
+                    Name = "Movie Request Plugin Configuration",
                     EmbeddedResourcePath = GetType().Namespace + ".Configuration.configPage.html"
                 }
             };
